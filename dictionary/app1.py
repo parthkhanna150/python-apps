@@ -8,7 +8,7 @@ def translate(w):
     if w in data:
         return data[w]
     elif len(get_close_matches(w, data.keys()))>0:
-        yn = input("Did you mean %s. Type Y or N?", get_close_matches(w, data.keys())[0])
+        yn = input("Did you mean %s. Type Y or N?" % get_close_matches(w, data.keys())[0])
         if yn == "Y":
             return data[get_close_matches(w, data.keys())[0]]
         else:
